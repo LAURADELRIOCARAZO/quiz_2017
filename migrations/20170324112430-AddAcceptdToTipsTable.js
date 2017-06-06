@@ -4,15 +4,14 @@ module.exports = {
     up: function (queryInterface, Sequelize) {
         return queryInterface.addColumn(
             'Tips',
-            'accepted',
+            'AuthorId',
             {
-                type: Sequelize.BOOLEAN,
-                defaultValue: false
+                type: Sequelize.INTEGER,
             }
         );
     },
 
     down: function (queryInterface, Sequelize) {
-        return queryInterface.removeColumn('Tips', 'accepted');
+        return queryInterface.removeColumn('Tips', 'AuthorId');
     }
 };
